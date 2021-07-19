@@ -1,0 +1,11 @@
+${PODS_ROOT}/Target Support Files/Pods-Prework/Pods-Prework-frameworks.sh
+${BUILT_PRODUCTS_DIR}/Comets/Comets.framework
+${BUILT_PRODUCTS_DIR}/Differentiator/Differentiator.framework
+${BUILT_PRODUCTS_DIR}/FaveButton/FaveButton.framework
+${BUILT_PRODUCTS_DIR}/Gradients/Gradients.framework
+${BUILT_PRODUCTS_DIR}/RxCocoa/RxCocoa.framework
+${BUILT_PRODUCTS_DIR}/RxDataSources/RxDataSources.framework
+${BUILT_PRODUCTS_DIR}/RxRelay/RxRelay.framework
+${BUILT_PRODUCTS_DIR}/RxSwift/RxSwift.framework
+${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework
+${BUILT_PRODUCTS_DIR}/SwiftTheme/SwiftTheme.framework

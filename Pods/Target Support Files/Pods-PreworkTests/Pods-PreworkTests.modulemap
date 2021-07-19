@@ -1,0 +1,6 @@
+framework module Pods_PreworkTests {
+  umbrella header "Pods-PreworkTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

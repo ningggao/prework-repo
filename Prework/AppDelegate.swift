@@ -6,14 +6,52 @@
 //
 
 import UIKit
+import SwiftTheme
 
 @main
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
-
+            //11111
+    var window: UIWindow?
+    //11111
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        
+        UserDefaults.standard.set(false, forKey: "switchState")
+        
+        MyThemes.restoreLastTheme()
+        
+        // status bar
+        
+        UIApplication.shared.theme_setStatusBarStyle([.lightContent, .default, .lightContent, .lightContent], animated: true)
+        
+        // navigation bar
+
+        let navigationBar = UINavigationBar.appearance()
+        
+        let shadow = NSShadow()
+        shadow.shadowOffset = CGSize(width: 0, height: 0)
+        
+        let titleAttributes = GlobalPicker.barTextColors.map { hexString in
+            return [
+                NSAttributedString.Key.foregroundColor: UIColor(rgba: hexString),
+                NSAttributedString.Key.font: UIFont.systemFont(ofSize: 16),
+                NSAttributedString.Key.shadow: shadow
+            ]
+        }
+        
+        navigationBar.theme_tintColor = GlobalPicker.textColor
+        navigationBar.theme_barTintColor = GlobalPicker.textColor
+        navigationBar.theme_titleTextAttributes = ThemeStringAttributesPicker.pickerWithAttributes(titleAttributes)
+        
+        // tab bar
+        
+        let tabBar = UITabBar.appearance()
+        
+        tabBar.theme_tintColor = GlobalPicker.barTextColor
+        tabBar.theme_barTintColor = GlobalPicker.barTintColor
+        //111111
         return true
     }
 
