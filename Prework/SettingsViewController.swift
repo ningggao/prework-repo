@@ -114,8 +114,9 @@ class SettingsViewController: UIViewController,FaveButtonDelegate {
         rounded.selectedSegmentIndex  =  Setting.roundSegment
         pickCurrency.selectRow(Setting.currencyPick, inComponent: 0, animated:true)
         
-        nightSwitch.isOn = Setting.colourDark
-       MyThemes.switchNight(isToNight: Setting.colourDark)
+     //   nightSwitch.isOn = Setting.colourDark
+      // MyThemes.switchNight(isToNight: Setting.colourDark)
+        print("333333333.viewDid : " ,Setting.colourDark)
     }
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
@@ -153,13 +154,12 @@ class SettingsViewController: UIViewController,FaveButtonDelegate {
         //123
         
         //111111111111111
-        let state = UserDefaults.standard.bool(forKey: "switchState")
-                nightSwitch.setOn(state, animated: true)
+       
         
                     //1111111111
        view.theme_backgroundColor = GlobalPicker.backgroundColor
         
-        updateTheme()
+        //updateTheme()
         roundTitle.theme_textColor = GlobalPicker.textColor
         currencyTitle.theme_textColor = GlobalPicker.textColor
         nightTitle.theme_textColor = GlobalPicker.textColor
@@ -260,11 +260,11 @@ class SettingsViewController: UIViewController,FaveButtonDelegate {
     
     @IBAction func changeNight(_ sender: UISwitch) {
         MyThemes.switchNight(isToNight: sender.isOn)
+        print("222222222.sender :" ,sender.isOn)
         Setting.colourDark = sender.isOn
-
-        UserDefaults.standard.set(sender.isOn, forKey: "switchState")
     }
-    @objc private func updateNightSwitch() {
+    
+   @objc private func updateNightSwitch() {
         nightSwitch.isOn = MyThemes.isNight()
     }
     

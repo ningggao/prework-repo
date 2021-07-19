@@ -133,7 +133,7 @@ class ViewController: UIViewController  {
         super.viewDidAppear(animated)
         
         billAmountTextField.placeholder =  numberFormatter.string(from:NSNumber(value: 0))
-        billAmountTextField.setValue(UIColor.systemGray3, forKeyPath: "placeholderLabel.textColor")
+        billAmountTextField.setValue(UIColor.systemGray, forKeyPath: "placeholderLabel.textColor")
 
      //   billAmountTextField.placeholder = NumberFormatter.localizedString(from: NSNumber(value: 0), number: .currency)
         tipAmountLabel.text = numberFormatter.string(from:NSNumber(value: Money.tip))
@@ -189,7 +189,7 @@ class ViewController: UIViewController  {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-
+        print("9999999.FIrsit:", Setting.colourDark )
         // Sets the title in the Navigation Bar
             self.title = "Tip Calculator"
         
@@ -207,7 +207,7 @@ class ViewController: UIViewController  {
         //
         view.theme_backgroundColor = GlobalPicker.backgroundColor
         
-        updateTheme()
+    //    updateTheme()
         TipPercentageLabel.theme_textColor = GlobalPicker.textColor
         perCent.theme_textColor = GlobalPicker.textColor
         billLabel.theme_textColor = GlobalPicker.textColor
@@ -220,7 +220,6 @@ class ViewController: UIViewController  {
             totalLabel.theme_textColor = GlobalPicker.textColor
             tipAmountLabel.theme_textColor = GlobalPicker.textColor
             billAmountTextField.theme_textColor = GlobalPicker.textColor
-        billAmountTextField.theme_keyboardAppearance = ThemeKeyboardAppearancePicker.pickerWithStringStyles(["default", "dark", "light"])
        
             
         //
@@ -428,24 +427,7 @@ class ViewController: UIViewController  {
     
     
     
-    override func traitCollectionDidChange(_ previousTraitCollection: UITraitCollection?) {
-        super.traitCollectionDidChange(previousTraitCollection)
-        updateTheme()
-    }
-    
-    private func updateTheme() {
-      
-        switch traitCollection.userInterfaceStyle {
-        case .light:
-            MyThemes.switchNight(isToNight: false)
-        case .dark:
-            MyThemes.switchNight(isToNight: true)
-        case .unspecified:
-            break
-        @unknown default:
-            break
-        }
-    }
+
     
   
 }
