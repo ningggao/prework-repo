@@ -160,7 +160,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" id="TdT-P8-msI">
-                                <rect key="frame" x="0.0" y="167" width="390" height="32"/>
+                                <rect key="frame" x="7" y="167" width="374" height="32"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES"/>
                                 <segments>
                                     <segment title="Default"/>
