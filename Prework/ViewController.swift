@@ -246,7 +246,7 @@ class ViewController: UIViewController  {
         personAmount.addTarget(self, action: #selector(personChange(sender2:)), for: UIControl.Event.valueChanged)
         
    
-        
+        tipSlider.isContinuous=true
         tipSlider.addTarget(self, action: #selector(tipChange(sender3:)), for: UIControl.Event.valueChanged)
         
         
