@@ -192,6 +192,15 @@ class ViewController: UIViewController  {
         print("9999999.FIrsit:", Setting.colourDark )
         // Sets the title in the Navigation Bar
             self.title = "Tip Calculator"
+        //123456789
+        billAmountTextField.text = UserDefaults.standard.string(forKey: "String")
+        tipSlider.value = UserDefaults.standard.float(forKey: "Double1")
+        
+        let getTip = String(format: "%.2f", tipSlider.value)
+        let tip = Double(getTip) ?? 0
+        let percent = Int(tip * 100)
+        perCent.text = String(format: "%d %%", Int(percent))
+        //123456789
         
         DispatchQueue.main.async {
                 self.billAmountTextField.becomeFirstResponder()
@@ -302,7 +311,7 @@ class ViewController: UIViewController  {
     
     
     @objc func billChange(sender1: UITextField){
-        
+        UserDefaults.standard.set(sender1.text, forKey: "String")
         Money.bill = Double(sender1.text!) ?? 0
         
         // Get Total tip by multiplying tip * tipPercentage
@@ -329,6 +338,7 @@ class ViewController: UIViewController  {
         // In Swift 4, this ^ has been renamed to simply NSLocale.curre
 
         perPerson.text = numberFormatter.string(from:NSNumber(value: perPersonmoney))
+        
     }
     
     @objc func personChange(sender2: UIStepper){
@@ -347,16 +357,20 @@ class ViewController: UIViewController  {
         
         perPerson.text = numberFormatter.string(from:NSNumber(value: perPersonmoney))
         personCount.text = String(format: "%d", personInt)
+        
+
     }
     
     @objc func tipChange(sender3: UISlider){
+        UserDefaults.standard.set(sender3.value, forKey: "Double1")
         let getTip = String(format: "%.2f", sender3.value)
-        
         
         Money.tipPercentages = Double(getTip) ?? 0
         
         let percent = Int(Money.tipPercentages * 100)
-        
+       //
+
+        //
         perCent.text = String(format: "%d %%", percent)
 
         Money.tip = Money.bill * Money.tipPercentages
@@ -378,7 +392,6 @@ class ViewController: UIViewController  {
         }
         
         perPerson.text = numberFormatter.string(from:NSNumber(value: perPersonmoney))
-        
         
     }
     
@@ -422,12 +435,5 @@ class ViewController: UIViewController  {
         }
         
      }
-    
-    
-    
-    
-    
-
-    
   
 }
