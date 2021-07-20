@@ -4,33 +4,38 @@
 
 Submitted by: **Ning Gao**
 
-Time spent: **1** hours spent in total
+Time spent: **50** hours spent in total
 
 ## User Stories
 
 The following **required** functionality is complete:
 
-* [ ] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
-* [ ] User can select between tip percentages by tapping different values on the segmented control and the tip value is updated accordingly
+* [✅] User can enter a bill amount, choose a tip percentage, and see the tip and total values.
+* [✅] User can select between tip percentages by tapping different values on the segmented control and the tip value is updated accordingly
 
 The following **optional** features are implemented:
 
-* [ ] UI animations
-* [ ] Remembering the bill amount across app restarts (if <10mins)
-* [ ] Using locale-specific currency and currency thousands separators.
-* [ ] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
+* [✅] UI animations
+* [✅] Remembering the bill amount across app restarts (if <10mins)
+* [✅] Using locale-specific currency and currency thousands separators.
+* [✅] Making sure the keyboard is always visible and the bill amount is always the first responder. This way the user doesn't have to tap anywhere to use this app. Just launch the app and start typing.
 
 The following **additional** features are implemented:
 
-- [ ] List anything else that you can get done to improve the app functionality!
+- [✅] User can select the number of people to get the values that per person should pay for.
+- [✅] User can round the per person value, including round up, round down.
+- [✅] Locale-specific currency including USD,EUR,CNY,GBP,JPY.
+- [✅] User can set the app to dark mode.
+- [✅] Added four animation buttons to make the app funny.
+- [✅] Added meteor shower as the background animation.
+
+
 
 ## Video Walkthrough
 
 Here's a walkthrough of implemented user stories:
 
-<img src='http://i.imgur.com/link/to/your/gif/file.gif' title='Video Walkthrough' width='' alt='Video Walkthrough' />
-
-GIF created with [LiceCap](http://www.cockos.com/licecap/).
+<img src='https://imgur.com/a/7P9fly9.gif' title='Tip' width='' alt='Tip' />
 
 ## Notes
 
