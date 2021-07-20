@@ -35,7 +35,8 @@ The following **additional** features are implemented:
 
 Here's a walkthrough of implemented user stories:
 
-<img src='https://imgur.com/a/7P9fly9.gif' title='Tip' width='' alt='Tip' />
+![image]( https://github.com/ningggao/prework-repo/blob/master/images/Tip%20app.gif)
+
 
 ## Notes
 
