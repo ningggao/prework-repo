@@ -31,9 +31,9 @@ The following **additional** features are implemented:
 
 
 
-## Video Walkthrough
+## Gif Tip
 
-Here's a walkthrough of implemented user stories:
+Here's a Tip of implemented user stories:
 
 ![image]( https://github.com/ningggao/prework-repo/blob/master/images/Tip%20app.gif)
 
